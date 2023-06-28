@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title> focus</title>
+
+</head>
+
+<body>
+    <select product:<select name="" id="product">
+        <option value="45000">AC</option>
+        <option value="22000">TV</option>
+        <option value="15000">Refrigerator</option>
+        <option value="70000">LAPTOP</option>
+
+    </select>
+    <br>
+    <br>
+    net prize : <input type="text" id="prize">
+    <br>
+    <br>
+    quantity : <input type="text" id="quantity">
+    <br>
+    <br>
+    total amount : <input type="text" id="amount">
+
+
+
+    <script>
+        var product = document.getElementById("product");
+        var quantity = document.getElementById("quantity");
+        var amount = document.getElementById("amount");
+        var prize = document.getElementById("prize");
+        product.addEventListener("focus", () => {
+            prize.value = product.value;
+        });
+        amount.addEventListener("focus",() => {
+            amount.value = product.value*quantity.value;
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
